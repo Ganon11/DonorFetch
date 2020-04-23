@@ -54,10 +54,13 @@ def get_donations(campaign_id, count):
 def main():
   """Prints a list of donors"""
   parser = argparse.ArgumentParser()
-  parser.add_argument('-c', '--campaign-id', type=int)
+  parser.add_argument('-c', '--campaign-id', type=int, required=True)
   parser.add_argument('-n', '--num-donations', type=int, default=100)
   args = parser.parse_args()
   donation_list = get_donations(args.campaign_id, args.num_donations)
+
+  if donation_list is None:
+    print(f'Something broke')
 
   if len(donation_list) > 0:
     # Print Donor list
