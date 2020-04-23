@@ -66,14 +66,14 @@ def main():
     # Print Donor list
     donors = get_donors(donation_list)
     for name in sorted(donors):
-      print(f'{name} donated ${donors[name]}')
+      print(f'{name} donated ${donors[name]:.2f}')
 
     # Print Total
     total = sum(map(lambda d: d.amount, donation_list))
-    print(f'Total: ${total}')
+    print(f'Total: ${total:.2f}')
 
     # Print Average
-    print(f'Average: ${total / len(donation_list)}')
+    print(f'Average: ${(total / len(donation_list)):.2f}')
   else:
     print('No donations yet!')
 
