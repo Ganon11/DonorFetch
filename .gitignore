@@ -131,3 +131,5 @@ dmypy.json
 # DonorFetch specific
 .accesstoken
 .campaignid
+.curlheaders
+response.json
