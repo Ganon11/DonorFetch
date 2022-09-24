@@ -70,7 +70,7 @@ def main():
 
     # Print Total
     total = sum(map(lambda d: d.amount, donation_list))
-    print(f'Total: ${total:.2f}')
+    print(f'\nTotal: ${total:.2f}')
 
     # Print Average
     print(f'Average: ${(total / len(donation_list)):.2f}')
